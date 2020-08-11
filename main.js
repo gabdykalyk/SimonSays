@@ -88,7 +88,7 @@ var simon = new Vue(
 		playSequenceId: null,
 		currentButton: '',
 		playSequenceCounter: 0,
-		lights: ['red', 'green', 'orange', 'blue'],
+		lights: ['blue', 'red', 'yellow', 'green'],
 		picked: 'easy'
 	},
 
@@ -119,6 +119,19 @@ var simon = new Vue(
 			} 
 
 			console.log(this.picked)
+		},
+
+		playSound(sound) {
+			if (sound) {
+				var audio = new Audio(sound);
+				audio.play();
+			}
+		},
+
+		playSoundRed() {
+			if (currentButton === 'red') {
+				playSound('./audio/1.mp3')
+			}
 		},
 
 		captureTap: function(color) 

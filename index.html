@@ -15,17 +15,25 @@
         <timer></timer>
         <div class="simon__main">
             <div class="simon__game" id="simon">
-                <button  class="simon__item simon__item--blue quarter" v-on:click="captureTap('red')" v-bind:class="{ 'bright': currentButton === 'red' }">
-
+                <button  class="simon__item simon__item--blue quarter" v-on:click="captureTap('blue')" v-bind:class="{ 'bright': currentButton === 'blue' }" @click.prevent="playSound('./audio/1.mp3')">
+                    <div v-if=" currentButton === 'blue'">
+                        {{ playSound('./audio/1.mp3') }}
+                    </div>
                 </button>
-                <button class="simon__item simon__item--red quarter" v-on:click="captureTap('blue')" v-bind:class="{ 'bright': currentButton === 'blue' }">
-
+                <button class="simon__item simon__item--red quarter" v-on:click="captureTap('red')" v-bind:class="{ 'bright': currentButton === 'red' }" @click.prevent="playSound('./audio/2.mp3')">
+                    <div v-if=" currentButton === 'red'">
+                        {{ playSound('./audio/2.mp3') }}
+                    </div>
                 </button>
-                <button class="simon__item simon__item--yellow quarter" v-on:click="captureTap('orange')" v-bind:class="{ 'bright': currentButton === 'orange' }">
-
+                <button class="simon__item simon__item--yellow quarter" v-on:click="captureTap('yellow')" v-bind:class="{ 'bright': currentButton === 'yellow' }" @click.prevent="playSound('./audio/3.mp3')">
+                    <div v-if=" currentButton === 'yellow'">
+                        {{ playSound('./audio/3.mp3') }}
+                    </div>
                 </button>
-                <button class="simon__item simon__item--green quarter" v-on:click="captureTap('green')" v-bind:class="{ 'bright': currentButton === 'green' }">
-
+                <button class="simon__item simon__item--green quarter" v-on:click="captureTap('green')" v-bind:class="{ 'bright': currentButton === 'green' }" @click.prevent="playSound('./audio/4.mp3')">
+                    <div v-if=" currentButton === 'green'">
+                        {{ playSound('./audio/4.mp3') }}
+                    </div>
                 </button>
             </div>
             <div class="simon__info">
