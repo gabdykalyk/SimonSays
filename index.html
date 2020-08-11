@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="#">
+</head>
+<body>
+    <div class="simon" id="main">
+        <h1 class="simon__title" >
+            Simon Says
+        </h1>
+        <timer></timer>
+        <div class="simon__main">
+            <div class="simon__game" id="simon">
+                <button  class="simon__item simon__item--blue quarter" v-on:click="captureTap('red')" v-bind:class="{ 'bright': currentButton === 'red' }">
+
+                </button>
+                <button class="simon__item simon__item--red quarter" v-on:click="captureTap('blue')" v-bind:class="{ 'bright': currentButton === 'blue' }">
+
+                </button>
+                <button class="simon__item simon__item--yellow quarter" v-on:click="captureTap('orange')" v-bind:class="{ 'bright': currentButton === 'orange' }">
+
+                </button>
+                <button class="simon__item simon__item--green quarter" v-on:click="captureTap('green')" v-bind:class="{ 'bright': currentButton === 'green' }">
+
+                </button>
+            </div>
+            <div class="simon__info">
+                <div class="simon__round">
+                    Раунд: <span id="round">{{ current }}</span>
+                </div>
+                <form action="" v-on:submit.prevent="onSubmit">
+                <button class="btn start" type="submit" id="btn" v-on:click="start()">Start</button>
+                <div class="simon__round">
+                    Уровень сложности:
+                </div>
+                    <label for="easy">
+                        <input class="input" type="radio" id="easy" value="easy" name="level" v-model="picked"> Лёгкий
+                    </label>
+                    <label for="medium">
+                        <input class="input" type="radio" id="medium" value="medium" name="level" v-model="picked"> Средний
+                    </label>
+                    <label for="hard">
+                        <input class="input" type="radio" id="hard" value="hard" name="level" v-model="picked"> Сложный
+                    </label>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="./main.js"></script>
+</body>
+</html>

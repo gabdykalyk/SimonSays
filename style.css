@@ -1,0 +1,128 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 5px;
+}
+
+.simon {
+    padding-top: 30px;
+}
+
+.simon__title {
+    text-align: center;
+    font-size: 35px;
+}
+
+.simon__main {
+    margin: 100px auto;
+    display: flex;
+    justify-content: center;
+}
+
+.simon__game {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.simon__item {
+    width: 50%;
+    height: 50%;
+    opacity: .6;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.simon__item--blue {
+    background-color: dodgerblue;
+    border-radius: 100% 0 0 0;
+}
+
+.simon__item--blue:hover {
+    border-top: 2px solid #000000;
+    border-left: 2px solid #000000;
+}
+
+.simon__item--red {
+    background-color: #FF5643;
+    border-radius: 0 100% 0 0;
+}
+
+.simon__item--red:hover {
+    border-top: 2px solid #000000;
+    border-right: 2px solid #000000;
+}
+
+.simon__item--yellow {
+    background-color: #FEEF33;
+    border-radius: 0 0 0 100%;
+}
+
+.simon__item--yellow:hover {
+    border-bottom: 2px solid #000000;
+    border-left: 2px solid #000000;
+}
+
+.simon__item--green {
+    background-color: #BEDE15;
+    border-radius: 0 0 100% 0;
+}
+
+.simon__item--green:hover {
+    border-bottom: 2px solid #000000;
+    border-right: 2px solid #000000;
+}
+
+.simon__info {
+    margin-left: 50px;
+}
+
+.btn {
+    background-color: #6DABE8;
+    padding: 6px 40px;
+    margin: 20px 0;
+    font-size: 20px;
+    border: 0;
+    outline: 0;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: hsl(210, 73%, 75%);
+}
+
+.simon__round {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.active {
+    opacity: 1;
+    border: 1px solid #000000;
+}
+
+.bright {
+    opacity: 1;
+}
+
+
