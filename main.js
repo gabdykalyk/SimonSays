@@ -31,13 +31,13 @@ Vue.component('timer',
 					self.startTimer();
 					break;			
 				case 'playing':
-					self.stopTimer('Watch closely!');
+					self.stopTimer('Смотри внимательно!');
 					break;
 				case 'goodjob':
-					self.stopTimer('Good job! Adding another light....');
+					self.stopTimer('Отлично! Добавляем новый цвет....');
 					break;
 				case 'gameover':
-					self.stopTimer('Oops, game over! Click Start to begin a new game!');
+					self.stopTimer('Оу, ты проиграл. Нажми Start, чтобы начать заново');
 					break;
 				default:
 					console.log("Timer: state changed to [" + $event + "]");
@@ -68,7 +68,7 @@ Vue.component('timer',
 			this.remaining--;
 			if (this.remaining === 0) 
 			{
-				this.stopTimer('Time expired! Click Start to begin a new game!');
+				this.stopTimer('Время вышло! Нажми Start, чтобы начать заново');
 				this.$emit('expired');
 			} 
 		}
